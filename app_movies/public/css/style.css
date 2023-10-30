@@ -1,0 +1,65 @@
+body{
+    background: url("https://cdn.pixabay.com/photo/2016/03/07/00/00/cinema-1241422_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    z-index:-3;
+    background-attachment: fixed;
+}
+
+/* CONFIGUARACIONES DE LA TIPOGRAFIA DE EL TITULO */
+@font-face{
+    font-family: 'Winter Dairy - Shiny';
+    src: url('../font/Winter Dairy - Shiny.ttf');
+}
+.titulo1{
+    font-family:'Winter Dairy - Shiny';
+    color: #ffffff;
+    font-size: 100px;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+.btn-facebook{
+    background-color: #0a58ca;
+    color: white;
+    border-radius: 50%;
+
+}.btn-facebook:hover{
+    background-color: white;
+    color:#0a58ca;
+}
+.btn-youtube{
+    background-color: #ca0a0b;
+    color: white;
+    border-radius: 50%;
+}
+.btn-youtube:hover{
+    background-color: #ffffff;
+    color:#ca0a0b;
+    border-radius: 50%;
+}
+.btn-whatsaap{
+    background-color: #1cb478;
+    color: white;
+    border-radius: 50%;
+}
+.btn-whatsaap:hover{
+    background-color: #ffffff;
+    color: #1cb478;;
+    border-radius: 50%;
+}
+.slider {
+width: 90%;
+margin: 100px auto;
+}
+
+.slick-slide {
+margin: 0px 20px;
+}
+
+.slick-slide img {
+width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+color: black;
+}

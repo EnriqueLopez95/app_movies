@@ -23,77 +23,16 @@
     
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     {{-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> --}}
+    
+    {{-- REFERENCIANDO ARCHIVO style.css DE LA CARPETA CSS DENTRO DE CARPETA PUBLIC --}}
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>Yo Quiero Ver - Plataforma de Peliculas</title>
     
     {{-- imagen de la pagina principal y sus configuraciones --}}
 
-    <style>
-        body{
-            background: url("https://cdn.pixabay.com/photo/2016/03/07/00/00/cinema-1241422_1280.jpg");
-            background-repeat: no-repeat;
-            background-size: 100vw 100vh;
-            z-index:-3;
-            background-attachment: fixed;
-        }
-
-        /* CONFIGUARACIONES DE LA TIPOGRAFIA DE EL TITULO */
-        @font-face{
-            font-family: 'Winter Dairy - Shiny';
-            src: url('font/Winter Dairy - Shiny.ttf');
-        }
-        .titulo1{
-            font-family:'Winter Dairy - Shiny';
-            color: #ffffff;
-            font-size: 100px;
-            text-shadow: 0.1em 0.1em 0.2em black;
-        }
-        .btn-facebook{
-            background-color: #0a58ca;
-            color: white;
-            border-radius: 50%;
-
-        }.btn-facebook:hover{
-            background-color: white;
-            color:#0a58ca;
-        }
-        .btn-youtube{
-            background-color: #ca0a0b;
-            color: white;
-            border-radius: 50%;
-        }
-        .btn-youtube:hover{
-            background-color: #ffffff;
-            color:#ca0a0b;
-            border-radius: 50%;
-        }
-        .btn-whatsaap{
-            background-color: #1cb478;
-            color: white;
-            border-radius: 50%;
-        }
-        .btn-whatsaap:hover{
-            background-color: #ffffff;
-            color: #1cb478;;
-            border-radius: 50%;
-        }
-        .slider {
-        width: 50%;
-        margin: 100px auto;
-    }
-
-    .slick-slide {
-      margin: 0px 20px;
-    }
-
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-      color: black;
-    }
-    </style>
+    {{-- <style>
+        
+    </style> --}}
 </head>
 <body>
  
@@ -173,32 +112,160 @@
         <button class="btn btn-dafault btn-lg btn-youtube animate__animated animate__zoomIn animate__delay-2s"><i class="bi bi-youtube"></i></button>
         <button class="btn btn-dafault btn-lg btn-whatsaap animate__animated animate__zoomIn animate__delay-3s"><i class="bi bi-whatsapp"></i></button>
         <br><br>
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        <section class="regular slider">
-            <div>
-              <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
-            </div>
-            <div>
-              <img src="https://www.clara.es/medio/2022/06/07/mejores-peliculas-romanticas-1225_d01b6bfc_1225x740.jpg">
-            </div>
-            <div>
-              <img src="https://cdn.culturagenial.com/es/imagenes/peliculas-para-ver-en-familia-netflix-og.jpg">
-            </div> 
-            <div>
-              <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg">
-            </div>
-            <div>
-              <img src="https://cdn.culturagenial.com/es/imagenes/peliculas-para-ver-en-familia-netflix-og.jpg">
-            </div>
-            <div>
-              <img src="https://cdn.culturagenial.com/es/imagenes/peliculas-para-ver-en-familia-netflix-og.jpg">
-            </div>
-          </section>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <form class="d-flex">
+              <label for=""><b style="color: white; font-size:25px; text-shadow: 0.1em 0.1em 0.2em black;"></style>Buscar: </b></label>
+              <input class="form-control me-2" type="search" placeholder="Nombre de la pelicula que buscas..." aria-label="Search">
+              <button class="btn btn-info" type="submit">
+                  <i class="bi bi-search"></i>
+              </button>
+          </form>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+        
     </center>
 
+</div>
+<br><br>
+
+{{-- CONTENEDOR DE IMAGENES DE PELICULAS --}}
+<div class="container" style="background-color: #f6f6f6f6 ;border-radius:10px">
+    <h3><p style="text-align: center"><b>Los mas vistos</b></p></h3>
+    <div class="row">
+      <section class="regular slider" style="margin-top: 0px">
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+        <div>
+          <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+        </div>
+      
+      </section>
+    </div>
+</div>
+
+
+<br><br>
+
+{{-- CONTENEDOR DE IMAGENES DE PELICULAS --}}
+<div class="container" style="background-color: #f6f6f6f6 ;border-radius:10px">
+  <h3><p style="text-align: center"><b>Animacion kids</b></p></h3>
+  <div class="row">
+    <section class="regular slider" style="margin-top: 0px">
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+      <div>
+        <img src="https://media.revistagq.com/photos/63e4f125df9a2fddd35516fc/16:9/w_2560%2Cc_limit/peliculas-disney-secuelas-toy-story-frozen.jpg" width="10px" height="200px">
+      </div>
+    
+    </section>
+  </div>
 </div>
 
 {{-- CONFIGURACIONES DE SLICK,JS --}}
@@ -211,8 +278,8 @@
       $(".regular").slick({
         dots: true,
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToShow: 6,
+        slidesToScroll: 6
       });
     });
 </script>
