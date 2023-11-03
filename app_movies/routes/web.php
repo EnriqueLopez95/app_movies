@@ -32,3 +32,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/admin', function () {
     return view('admin.index');
 });
+
+// //RUTA PARA EL ADMINISTRADOR Y EL DIRECTORIO PELICULAS "ESTATICA"
+// Route::get('/peliculas', function () {
+//     return view('peliculas.index');
+// });
+
+//RUTA PARA EL ADMINISTRADOR-PELICULAS
+Route::get('/admin/peliculas',[App\Http\Controllers\PeliculaController::class, 'index']);
