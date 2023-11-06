@@ -39,4 +39,9 @@ Route::get('/admin', function () {
 // });
 
 //RUTA PARA EL ADMINISTRADOR-PELICULAS
-Route::get('/admin/peliculas',[App\Http\Controllers\PeliculaController::class, 'index']);
+//Route::get('/admin/peliculas',[App\Http\Controllers\PeliculaController::class, 'index']);
+
+//RUTA DE LA VISTA CREATE QUE RETORNA LA FUNCION CREAR
+//Route::get('/admin/peliculas/create',[App\Http\Controllers\PeliculaController::class, 'create']);
+
+Route::resource('/admin/peliculas',\App\Http\Controllers\PeliculaController::class);

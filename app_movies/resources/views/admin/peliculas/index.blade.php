@@ -51,25 +51,50 @@
                   <th>duracion</th>
                   <th>servidor 1</th>
                   <th>servidor 2</th>
+                  <th>Acciones</th>
+
                 </tr>
               </thead>
-              <tr>
+              <tbody>
+                {{-- CONTADOR PARA QUE LOS ID DE LOS REGISTROS BORRADOS SE PIERDAN           --}}
+                <?php $contador = 0;?>  
                 @foreach ($peliculas as $pelicula)
                     <tr>
-                        <td>{{$pelicula->id}}</td>
+                        <td><?php echo $contador = $contador+1;?></td>
+                        {{-- // <td>{{$pelicula->id}}</td> --}}
                         <td>{{$pelicula->titulo_p}}</td>
-                        <td>{{$pelicula->descripcion_p}}</td>
+                        <td>{!!$pelicula->descripcion_p!!}</td>
                         <td>{{$pelicula->categoria_p}}</td>
                         <td>
-                            <img src="{{$pelicula->imagen_p}}"width="100px" alt="">
+                            <img src="{{$pelicula->imagen_p}}"width="100px" alt="jjj"> 
+
+                            {{-- PENDIENTE DE VIDEO 41 --}}
+                            {{-- <img src="{{asset('storage').'/'.$pelicula->imagen_p}}"width="100px" alt="jjj"> --}}
                         </td>
-                        <td>{{$pelicula->trailer_p}}</td>
+                        {{-- <td>{{$pelicula->trailer_p}}</td> --}}
+                        <td>
+                          <a href="https://www.youtube.com/watch?v={{$pelicula->trailer_p}}" target="target">
+                            VER
+                          </a>
+                        </td>
                         <td>{{$pelicula->duracion_p}}</td>
                         <td>{{$pelicula->link1_p}}</td>
                         <td>{{$pelicula->link2_p}}</td>
+                        <td>
+                            
+
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <a href="{{route('peliculas.show',$pelicula->id)}}"class="btn btn-info btn-sm">Mostrar</a>
+                              <a href=""class="btn btn-success btn-sm">Editar</a>
+                              <a href=""class="btn btn-danger btn-sm">Eliminar</a>
+                            </div>
+                            
+                        </td>
+
                     </tr>
                 @endforeach
-              </tr>
+              </tbody>
+              
 
             </table>
             
