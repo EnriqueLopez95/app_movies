@@ -22,7 +22,17 @@ class PeliculaController extends Controller
 
     //ALMACENA LA INFORMACION QUE SE ENVIA DESDE EL FORMULARIO
     public function store(Request $request){
-
+        //Guarda la informacion del formulario registro de peliculas
+        $pelicula = new Pelicula();
+        $pelicula->titulo_p = $request->titulo_p;
+        $pelicula->descripcion_p = $request->descripcion_p;
+        $pelicula->categoria_p = $request->categoria_p;
+        $pelicula->imagen_p = $request->imagen_p;
+        $pelicula->trailer_p = $request->trailer_p;
+        $pelicula->duracion_p = $request->duracion_p;
+        $pelicula->link1_p = $request->link1_p;
+        $pelicula->link2_p = $request->link2_p;
+        $pelicula->save();
     }
 
     //PERMITE MOSTRAR UN REGISTRO ESPECIFICO CON UN ID
@@ -33,7 +43,9 @@ class PeliculaController extends Controller
     }
 
     //MOSTRAR VISTA Y CARGAR LOS DATOS QUE SE QUIERAN EDITAR
-    public function edit(){
+    public function edit($id){
+        $pelicula = Pelicula::FindOrFail($id);
+        return view('admin.peliculas.edit',['pelicula'=>$pelicula]);
 
     }
 

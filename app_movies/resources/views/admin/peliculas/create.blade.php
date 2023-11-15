@@ -31,19 +31,20 @@
           </div>
           <div class="card-body">
                 <form action="{{url('/admin/peliculas')}}"method="POST">
+                  @csrf
                     <div class="row">
                          <div class="col-md-8">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                     <label for="">Titulo de la pelicula</label>
-                                    <input type="text"class="form-control">
+                                    <input type="text" name="titulo_p" class="form-control">
                                 </div>
                             </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="">Categoria</label>
-                                        <input type="text"class="form-control">
+                                        <input type="text" name="categoria_p" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -51,13 +52,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="">Trailer</label>
-                                        <input type="text"class="form-control">
+                                        <input type="text" name="trailer_p" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="">Duracion</label>
-                                        <input type="text"class="form-control">
+                                        <input type="text" name="duracion_p" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -68,21 +69,21 @@
                             
                             <div class="form-group">
                                 <label for="">Servidor1</label>
-                                <input type="text"class="form-control">
+                                <input type="text" name="link1_p" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="">Servidor2</label>
-                                <input type="text"class="form-control">
+                                <input type="text" name="link2_p" class="form-control">
                             </div>
                          </div>
                          <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Descripcion de la pelicula</label>
-                                <textarea name="" id="" cols="30" rows="5"class="form-control"></textarea>
+                                <textarea name="descripcion_p" id="" cols="30" rows="5"class="form-control"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="">Portada de la pelicula</label>
-                                <input type="file"class="form-control">
+                                <input type="file" name="imagen_p" form-control">
                             </div>
                          </div>
 

@@ -85,7 +85,7 @@
 
                             <div class="btn-group" role="group" aria-label="Basic example">
                               <a href="{{route('peliculas.show',$pelicula->id)}}"class="btn btn-info btn-sm">Mostrar</a>
-                              <a href=""class="btn btn-success btn-sm">Editar</a>
+                              <a href="{{route('peliculas.edit',$pelicula->id)}}"class="btn btn-success btn-sm">Editar</a>
                               <a href=""class="btn btn-danger btn-sm">Eliminar</a>
                             </div>
                             
